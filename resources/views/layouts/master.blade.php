@@ -98,9 +98,9 @@
                                     @csrf
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                        @click.prevent="$root.submit();"><i
-                                            class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
-                                            class="align-middle" data-key="t-logout">Deconnexion</span></a>
+                                        onclick="event.preventDefault(); this.closest('form').submit(); "
+                                        role="button"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                        <span class="align-middle" data-key="t-logout">Deconnexion</span></a>
                                 </form>
                             </div>
                         </div>
