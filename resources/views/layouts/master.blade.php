@@ -20,7 +20,7 @@
     <!--Swiper slider css-->
     <link href="{{ asset('assets/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
 
-   
+
     <!-- Bootstrap Css -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -34,7 +34,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite([ 'resources/js/app.js'])
 
 </head>
 
@@ -153,7 +153,7 @@
                             <div class="collapse menu-dropdown" id="sidebarDashboards">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link" data-key="t-analytics">
+                                        <a href="{{ route('ticketing.declare') }}" class="nav-link" data-key="t-analytics">
                                             Declaration </a>
                                     </li>
                                     <li class="nav-item">
@@ -212,7 +212,7 @@
         <div class="page-content">
             <div class="container-fluid">
 
-
+                @yield('content')
 
             </div>
             <!-- container-fluid -->
