@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TicketingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return redirect('login');
+})->name('home');
 
 Route::middleware([
     'auth:sanctum',
@@ -25,4 +26,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/dashboard/ticketing/', [TicketingController::class, 'index'])
+    ->name('ticketing.declare');
 });
