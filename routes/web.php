@@ -28,4 +28,6 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/dashboard/ticketing/', [TicketingController::class, 'index'])
     ->name('ticketing.declare');
+    Route::post('/dashboard/ticketing/', [TicketingController::class, 'ticketing_declaration'])
+    ->name('ticketing.declare');
 });

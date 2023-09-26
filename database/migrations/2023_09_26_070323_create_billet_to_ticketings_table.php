@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('ticketing_id');
             $table->foreignId('billet_id');
+            $table->integer('qty');
             $table->timestamps();
         });
     }
