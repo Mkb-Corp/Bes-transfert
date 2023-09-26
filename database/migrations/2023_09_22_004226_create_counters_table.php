@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('counters', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->foreignId('user_id')->unique();
+            $table->foreignId('user_id')->unique()->nullable();
             $table->timestamps();
         });
     }

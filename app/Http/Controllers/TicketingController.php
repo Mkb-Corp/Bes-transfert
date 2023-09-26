@@ -18,7 +18,7 @@ class TicketingController extends Controller
 
         $day_ticketing = Ticketing::where('ticketing_day', Carbon::now()->format('Y-m-d'))->get();
         $ticketings = array();
-        if ($day_ticketing) {
+        if (count($day_ticketing) > 0) {
             $ticketings = BilletToTicketing::where('ticketing_id', $day_ticketing[0]->id)->get();
         }
         // dump($day_ticketing);
