@@ -5,19 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use App\Models\Currency;
+use App\Models\Billet;
 
-class Billet extends Model
+class BilletToTicketing extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'amount',
-        'currency_id'
+        'ticketing_id',
+        'billet_id',
+        'qty'
     ];
 
-    public function currency(): BelongsTo
+    public function billet(): BelongsTo
     {
-        return $this->belongsTo(Currency::class, 'currency_id');
+        return $this->belongsTo(Billet::class, 'billet_id');
     }
 }
