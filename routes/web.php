@@ -29,6 +29,10 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/dashboard/ticketing/', [TicketingController::class, 'index'])
     ->name('ticketing.declare');
+    Route::get('/dashboard/ticketing/dispatch', [TicketingController::class, 'dispatching'])
+    ->name('ticketing.dispatching');
+    Route::post('/dashboard/ticketing/dispatch', [TicketingController::class, 'dispatch'])
+    ->name('ticketing.dispatching');
     Route::post('/dashboard/ticketing/', [TicketingController::class, 'ticketing_declaration'])
     ->name('ticketing.declare');
 
