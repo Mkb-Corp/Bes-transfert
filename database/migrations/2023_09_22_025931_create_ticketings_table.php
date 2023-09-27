@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('ticketings', function (Blueprint $table) {
             $table->id();
-            $table->date('ticketing_day');
+            $table->date('ticketing_day')->unique();
             $table->timestamps();
         });
     }
