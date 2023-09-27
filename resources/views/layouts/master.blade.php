@@ -157,7 +157,7 @@
                                             Declaration </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link" data-key="t-crm"> Repartition </a>
+                                        <a href="{{ route('ticketing.dispatching') }}" class="nav-link" data-key="t-crm"> Repartition </a>
                                     </li>
                                 </ul>
                             </div>
@@ -178,15 +178,7 @@
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link" data-key="t-basic"> Creer
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link" data-key="t-basic"> Tous les guichets
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link" data-key="t-basic"> Assigner
+                                        <a href="{{ route('counters.index') }}" class="nav-link" data-key="t-basic"> Tous les guichets
                                         </a>
                                     </li>
                         </li>
@@ -211,7 +203,7 @@
 
         <div class="page-content">
             <div class="container-fluid">
-
+                @include('flash-message')
                 @yield('content')
 
             </div>
