@@ -178,15 +178,7 @@
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link" data-key="t-basic"> Creer
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link" data-key="t-basic"> Tous les guichets
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link" data-key="t-basic"> Assigner
+                                        <a href="{{ route('counters.index') }}" class="nav-link" data-key="t-basic"> Tous les guichets
                                         </a>
                                     </li>
                         </li>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CounterController;
 use App\Http\Controllers\TicketingController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +31,9 @@ Route::middleware([
     ->name('ticketing.declare');
     Route::post('/dashboard/ticketing/', [TicketingController::class, 'ticketing_declaration'])
     ->name('ticketing.declare');
+
+    Route::get('/dashboard/counters', [CounterController::class, 'index'])
+    ->name('counters.index');
+    Route::post('/dashboard/counters/assign', [CounterController::class, 'assign_user'])
+    ->name('assign_user');
 });
