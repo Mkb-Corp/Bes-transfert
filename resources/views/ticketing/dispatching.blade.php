@@ -15,8 +15,6 @@
             </div><!-- end card header -->
 
             <div class="card-body">
-                <p class="text-muted">Use <code>col-sm-</code> class with required size value to set column size as per your
-                    requirement.</p>
                 <div class="live-preview">
                     <form action="{{ route('ticketing.dispatching') }}" method="post">
                         @csrf

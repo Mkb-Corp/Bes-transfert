@@ -34,7 +34,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    @vite([ 'resources/js/app.js'])
+    @vite(['resources/js/app.js'])
 
 </head>
 
@@ -144,6 +144,10 @@
                     <div id="two-column-menu">
                     </div>
                     <ul class="navbar-nav" id="navbar-nav">
+                        <li class="nav-item">
+                            <a href="{{ route('dashboard') }}" class="nav-link" data-key="t-analytics">
+                                Accueil </a>
+                        </li>
                         <li class="menu-title"><span data-key="t-menu">BILLETAGE</span></li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse"
@@ -153,11 +157,13 @@
                             <div class="collapse menu-dropdown" id="sidebarDashboards">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="{{ route('ticketing.declare') }}" class="nav-link" data-key="t-analytics">
+                                        <a href="{{ route('ticketing.declare') }}" class="nav-link"
+                                            data-key="t-analytics">
                                             Declaration </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('ticketing.dispatching') }}" class="nav-link" data-key="t-crm"> Repartition </a>
+                                        <a href="{{ route('ticketing.dispatching') }}" class="nav-link"
+                                            data-key="t-crm"> Repartition </a>
                                     </li>
                                 </ul>
                             </div>
@@ -178,7 +184,8 @@
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                     <li class="nav-item">
-                                        <a href="{{ route('counters.index') }}" class="nav-link" data-key="t-basic"> Tous les guichets
+                                        <a href="{{ route('counters.index') }}" class="nav-link" data-key="t-basic">
+                                            Tous les guichets
                                         </a>
                                     </li>
                         </li>
@@ -237,6 +244,7 @@
     <!--end back-to-top-->
 
     <!-- JAVASCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
     <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
@@ -259,6 +267,8 @@
 
     <!-- App js -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
+
+    @yield('scripts')
 </body>
 
 </html>
